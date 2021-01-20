@@ -30,3 +30,4 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
 
 INSERT INTO tb_usuario (nome_usuario, telefone, endereco)
 VALUES ('Bernado Silva', '91 9999-9999', 'Rua Nova, Número 100');
+teste
