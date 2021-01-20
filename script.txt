@@ -5,8 +5,6 @@ Database name: id11043282_db_usuario
 Database username: id11043282_admin
 Password: Jc\|+M<<0^^{Bc\4
 
-Schema
-
 
 -- Host: localhost    Database: id11043282_db_usuario
 
@@ -30,4 +28,3 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
 
 INSERT INTO tb_usuario (nome_usuario, telefone, endereco)
 VALUES ('Bernado Silva', '91 9999-9999', 'Rua Nova, Número 100');
-teste
