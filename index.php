@@ -8,7 +8,7 @@
  <body>
 
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="database.php">
+        <form method="post" action="controller.php">
             <label class ="h4">Cadastro de Usuário:</label>
             <div class="form-group">
                 <label for="nome">Nome: </label>
