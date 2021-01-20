@@ -10,25 +10,21 @@ Schema
 
 -- Host: localhost    Database: id11043282_db_usuario
 
--- -----------------------------------------------------
--- Schema estoque
--- -----------------------------------------------------
+-- Schema db_usuario
 -- DROP SCHEMA IF EXISTS `db_usuario` ;
 
-CREATE SCHEMA IF NOT EXISTS `db_usuario`;
+CREATE SCHEMA IF NOT EXISTS `id11043282_db_usuario`;
 
-SHOW WARNINGS;
-USE `db_usuario` ;
-
+USE `id11043282_db_usuario` ;
 -- -----------------------------------------------------
--- Table `fornecedor`
+-- Table `tb_usuario`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `fornecedor` ;
+-- DROP TABLE IF EXISTS `tb_usuario` ;
 
 CREATE TABLE IF NOT EXISTS `tb_usuario` (
   `id_usuario` INT(11) NOT NULL AUTO_INCREMENT,
   `nome_usuario` VARCHAR(50) NOT NULL,
   `telefone` VARCHAR(15) NULL,
-  `endereco` VARCHAR(120) NULL
-  PRIMARY KEY (`id_usuario`))
-ENGINE = InnoDB;
+  `endereco` VARCHAR(120) NULL,
+  PRIMARY KEY (`id_usuario`));
+

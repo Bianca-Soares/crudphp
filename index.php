@@ -14,7 +14,18 @@
 
         //requisição das variáveis do banco
 
-        DBConnect();
+        $nome = "João 'Silva'";
+
+        $dados = array(
+            'nome' => "João 'Silva'",
+            'idade' => 30
+        ); 
+
+        $nome = DBEScape($nome);
+
+        echo "SELECT * FROM tb_usuario WHERE nome_usuario = '$nome' ";
+
+         
     ?>
  </body>
 </html>
