@@ -1,6 +1,26 @@
+<?php
+
+$nome= $_POST['nome_usuario'];
+$telefone= $_POST['telefone'];
+$endereco= $_POST['endereco'];
+
+
 switch ($acao) {
     case 'adicionar': {
-        $sql_add="INSERT INTO `tb_usuario` ( `nome_usuario`, `telefone`, `endereco`) VALUES ('$nome_add', '$quant_add', '$preco_add', '$subtotal_add')";
+
+        $usuario = array(
+            'nome_usuario'  => $nome,
+            'telefone'      => $telefone,
+            'endereco'      => $endereco
+        );
+        
+        $salva = DBCreate('tb_usuario', $usuario);
+        DBExecute($salva);
+    }
+}    
+require('index.php');   
+    
+       /* $sql_add="INSERT INTO `tb_usuario` ( `nome_usuario`, `telefone`, `endereco`) VALUES ('$nome_add', '$quant_add', '$preco_add', '$subtotal_add')";
         // $resp_add= @mysqli_query($conexao,$sql_add);
         
         // if($resp_add){ 
@@ -17,4 +37,5 @@ switch ($acao) {
         break; 
     case 'autenticar': {
 
-    }
+    }*/
+    ?>

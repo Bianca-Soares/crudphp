@@ -8,7 +8,7 @@
  <body>
 
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="controller.php">
+        <form method="post" action="/controller.php">
             <label class ="h4">Cadastro de Usuário:</label>
             <div class="form-group">
                 <label for="nome">Nome: </label>
@@ -22,7 +22,7 @@
                 <label for="endereco">Endereço: </label>
                 <input type="text" class="form-control" id="endereco" nome="endereco" >
             </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <a href="index.php" class="btn btn-primary">Registrar</a>
         </form>
     </div>   
     <?php  
@@ -39,19 +39,9 @@
 
        
         //var_dump(DBExecute($query));
-        
-        $usuario = array(
-            'nome_usuario'  => 'Silva',
-            'telefone'      => '91 9999-9999',
-            'endereco'      => 'Rua 15'
-        );
-        
-        //$salva = DBCreate('tb_usuario', $usuario);
 
         $usuario = DBRead('tb_usuario', null, 'nome_usuario, telefone');
-        //var_dump($usuario);
-
-        
+        //var_dump($usuario); 
 
     ?>
     
