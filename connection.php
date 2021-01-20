@@ -20,7 +20,10 @@
         if(!is_array($dados)){
             $dados = mysqli_real_escape_string($link, $dados);
         }else{
+            $arr = $dados;
+            foreach ($arr as $key => $value){
 
+            }
         }
 
         DBClose($link);

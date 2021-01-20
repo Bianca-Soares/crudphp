@@ -21,10 +21,11 @@
             'idade' => 30
         ); 
 
-        $nome = DBEScape($nome);
+        $nome = DBEScape($dados);
 
-        echo "SELECT * FROM tb_usuario WHERE nome_usuario = '$nome' ";
+        var_dump(DBEScape($dados));
 
+        
          
     ?>
  </body>
