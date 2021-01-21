@@ -36,12 +36,19 @@
         $query = "UPDATE {$table} SET campo1 = 'valor1'{$where}";
     }
 
-//Executa Querys
+// Excluir Registro
+    function DBDelete($table, $where){
+        $query = "DELETE FROM {$table} WHERE {$where}";
+        return DBExecute($query);
+    }
+
+    //Executa Querys
     function DBExecute($query){
         $link = DBConnect();
         $result = @mysqli_query($link, $query) or die(mysqli_error($link));
         DBClose($link);
         return $result;
     }
+
 
 ?>
