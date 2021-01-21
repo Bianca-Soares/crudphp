@@ -27,4 +27,10 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
   PRIMARY KEY (`id_usuario`));
 
 INSERT INTO tb_usuario (nome_usuario, telefone, endereco)
-VALUES ('Bernado Silva', '91 9999-9999', 'Rua Nova, Número 100');
+VALUES ('Joao Silva', '91 9999-9999', 'Rua 15, Número 100');
+
+
+USE `id11043282_db_usuario` ;
+show tables;
+
+SELECT * FROM information_schema.tables where table_schema = 'estar';
