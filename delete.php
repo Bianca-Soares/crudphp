@@ -6,12 +6,10 @@
   <title>Crud PHP com MySQli</title>
 
  </head>
- <body>
-    <div class="container mt-5">
-        <a class="btn btn-primary" href="index.php" role="button" >Página de cadastro</a>
-        <a class="btn btn-primary" href="consulta.php" role="button">Página de consulta</a>
+ <body>   
       <?php
-
+        //exibir menu
+          require 'menu.php';
         //requisição das variáveis do banco
           require 'init.php';
         //requisição da conexão com banco
@@ -28,7 +26,6 @@
             echo"erro";
             echo mysqli_error($conexao);
         }
-    //DBExecute($query); 
       ?>
     </div>    
  </body>

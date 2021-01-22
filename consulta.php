@@ -53,7 +53,7 @@
                         echo 'Endereço: '.$user['endereco'].'<br><br>';
     //MUDAR PARA O MÉTODO POST                   
                         echo '<a class="btn btn-primary" href="editar.php?id_usuario='.$user['id_usuario'].'" role="button" value="editar">Editar</a>
-                            <a class="btn btn-primary" href="delete.php?id_usuario='.$user['id_usuario'].'" method="post" role="button" value="excluir">Excluir</a> <br><hr>';
+                            <a class="btn btn-primary" href="delete.php?id_usuario='.$user['id_usuario'].'" role="button" value="excluir">Excluir</a> <br><hr>';
                 }
                 
                 ?>

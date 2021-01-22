@@ -18,8 +18,9 @@
       //requisição das querys
         require 'database.php';
 
-      
-        $nome= $_POST['nome_usuario'];
+        $id= $_GET['id'];
+        echo $id;
+        /*$nome= $_POST['nome_usuario'];
         $telefone= $_POST['telefone'];
         $endereco= $_POST['endereco'];
 
@@ -36,7 +37,7 @@
         }else{
             echo"erro";
             echo mysqli_error($conexao);
-        }
+        }*/
       ?>
     </div>    
  </body>

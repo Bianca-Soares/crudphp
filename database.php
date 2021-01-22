@@ -30,10 +30,17 @@
         return DBExecute($query);
     }
 
-// Alterar Registro
+// Altera Registro
     function DBUpdate($table, array $data, $where = null){
+        foreach ($data as $key => $value){
+            $fields[] = "{$key} = '{$value}'";
+        }
+
+        $fields = implode(', ', $fields);
+
         $where = ($where) ? " WHERE {$where}" : null;//alternário se ? senão recebe null
-        $query = "UPDATE {$table} SET campo1 = 'valor1'{$where}";
+        $query = "UPDATE {$table} SET {$fields}{$where}";
+        return DBExecute($query);
     }
 
 // Excluir Registro

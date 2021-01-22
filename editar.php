@@ -6,12 +6,9 @@
   <title>Crud PHP com MySQli</title>
  </head>
  <body>   
- <div class="container mt-5">
-        <a class="btn btn-primary" href="index.php" role="button" value="editar">Página de cadastro</a>
-        <a class="btn btn-primary" href="consulta.php" role="button" >Consultar Registros</a>
- </div>
-
- <?php  
+    <?php  
+        //exibir menu
+        require 'menu.php';
         //requisição das variáveis do banco
         require 'init.php';
 
@@ -27,38 +24,17 @@
         $pesquisa= 'Joao';
 
         //$usuario = DBRead('tb_usuario',"WHERE nome_usuario LIKE '%$pesquisa%'");
-       // DBUpDate('tb_usuario', array(), 'id = 2');
+    // DBUpDate('tb_usuario', array(), 'id = 2');
+    $id = $_GET['id_usuario'];
+
     ?>
-
-
-<div class="container mt-5">
-        <label class ="h4">Lista de Usuário:</label>
-        <div class="card"  >
-            <div class="card-body ">
-                <?php
-                //consulta da tabela de usuário
-                    $usuario = DBRead('tb_usuario');
-                //foreach para trabalhar com array
-                    foreach($usuario as $user){
-                        echo 'Nome: '.$user['nome_usuario'].'<br>';
-                        echo 'Telefone: '.$user['telefone'].'<br>';
-                        echo 'Endereço: '.$user['endereco'].'<br><br>';
-    //MUDAR PARA O MÉTODO POST                   
-                        echo '<a class="btn btn-primary" href="index.php?id_usuario='.$user['id_usuario'].'" role="button" value="editar">Editar</a>
-                            <a class="btn btn-primary" href="delete.php?id_usuario='.$user['id_usuario'].'" method="post" role="button" value="excluir">Excluir</a> <br><hr>';
-                }
-                
-                ?>
-            </div>
-        <div>    
-    </div>
-
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="/controle.php">
+    <?php echo '<form method="post" action="/controleeditar.php?id='.$id.'">';?>
             <label class ="h4">Editar de Usuário:</label>
             <div class="form-group">
                 <label for="nome">Nome: </label>
-                <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" required>
+                <?php  echo '<input type="text" class="form-control" id="nome_usuario" name="nome_usuario" value="'.$id.'" required>';?>
+                <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" value="" required>
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone: </label>
@@ -71,6 +47,5 @@
             <button class="btn btn-primary" type="submit">Editar</a>
         </form>
     </div>
-
 </body>
 </html>

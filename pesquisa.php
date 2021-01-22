@@ -20,11 +20,11 @@
 
     ?>
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="/editar.php">
+        <form method="post" action="/controle.php?acao=pesquisa">
             <label class ="h4">Pesquisar pelo nome:</label>
             <div class="form-group">
                 <label for="telefone">Nome: </label>
-                <input type="text" class="form-control" id="nome" name="nome" required >
+                <input type="text" class="form-control" id="nome" name="nome" >
             </div>
             <button class="btn btn-primary" type="submit">Pesquisar</a>
         </form>
