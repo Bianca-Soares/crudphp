@@ -21,7 +21,7 @@
 // Salva Registro
     function DBCreate($table, array $data){
 
-       // $data = DBEscape($data);
+        $data = DBEscape($data);
 
         $fields = implode(', ', array_keys($data));
         $values = "'".implode("', '", $data)."'";

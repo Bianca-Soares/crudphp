@@ -34,3 +34,5 @@ USE `id11043282_db_usuario` ;
 show tables;
 
 SELECT * FROM information_schema.tables where table_schema = 'estar';
+
+DELETE FROM table_name WHERE condition;
