@@ -29,13 +29,15 @@
             //var_dump($usuario);
         //foreach para trabalhar com array
             foreach($usuario as $user){
-                $nome = $user['nome_usuario'];
+                if($user['id_usuario'] == $id){
+                    $nome = $user['nome_usuario'];
                 
-                $telefone = $user['telefone'];
+                    $telefone = $user['telefone'];
 
-                $endereco = $user['endereco'];}
+                    $endereco = $user['endereco'];}
+                }
+                
                
-
     ?>
     
     <div class="container p-5 shadow mt-5">
