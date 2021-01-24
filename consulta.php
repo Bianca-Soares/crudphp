@@ -27,16 +27,6 @@
         //requisição das querys
         require 'database.php';
 
-        $table = "tb_usuario";
-        $nome = "João Silva";
-
-        //DBDelete('');
-       // var_dump(DBExecute($query));
-
-        $pesquisa= 'Joao';
-
-        //$usuario = DBRead('tb_usuario',"WHERE nome_usuario LIKE '%$pesquisa%'");
-       // DBUpDate('tb_usuario', array(), 'id = 2');
     ?>
 
     <div class="container mt-5">
@@ -52,8 +42,8 @@
                         echo 'Telefone: '.$user['telefone'].'<br>';
                         echo 'Endereço: '.$user['endereco'].'<br><br>';
     //MUDAR PARA O MÉTODO POST                   
-                        echo '<a class="btn btn-primary" href="editar.php?id_usuario='.$user['id_usuario'].'" role="button" value="editar">Editar</a>
-                            <a class="btn btn-primary" href="delete.php?id_usuario='.$user['id_usuario'].'" role="button" value="excluir">Excluir</a> <br><hr>';
+                        echo '<a class="btn btn-primary" href="formularioedita.php?id_usuario='.$user['id_usuario'].'" role="button" >Editar</a>
+                            <a class="btn btn-primary" href="delete.php?id_usuario='.$user['id_usuario'].'"  role="button" >Excluir</a> <br><hr>';
                 }
                 
                 ?>

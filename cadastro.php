@@ -11,7 +11,7 @@
     <a class="btn btn-primary" href="pesquisa.php" role="button" >Pesquisar Registro</a>
 </div>
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="/controle.php">
+        <form method="post" action="controle.php">
             <label class ="h4">Cadastro de Usuário:</label>
             <div class="form-group">
                 <label for="nome">Nome: </label>

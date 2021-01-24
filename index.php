@@ -6,28 +6,26 @@
   <title>Crud PHP com MySQli</title>
  </head>
  <body>   
-    <?php  
-        //exibir menu
-        require 'menu.php';
-        //requisição das variáveis do banco
-        require 'init.php';
-
-        //requisição da conexão com banco
-        require 'connection.php';
-
-        //requisição das querys
-        require 'database.php';
-
-    ?>
+ <div class="container mt-5">
+        <a class="btn btn-primary" href="consulta.php" role="button" >Consultar Registros</a>
+</div>
     <div class="container p-5 shadow mt-5">
-        <form method="post" action="/editar.php">
-            <label class ="h4">Pesquisar pelo nome:</label>
+        <form method="post" action="controle.php">
+            <label class ="h4">Cadastro de Usuário:</label>
             <div class="form-group">
-                <label for="telefone">Nome: </label>
-                <input type="text" class="form-control" id="nome" name="nome" required >
+                <label for="nome">Nome: </label>
+                <input type="text" class="form-control" id="nome_usuario" name="nome_usuario" required>
             </div>
-            <button class="btn btn-primary" type="submit">Pesquisar</a>
+            <div class="form-group">
+                <label for="telefone">Telefone: </label>
+                <input type="number" class="form-control" id="telefone" name="telefone" >
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço: </label>
+                <input type="text" class="form-control" id="endereco" name="endereco" >
+            </div>
+            <button class="btn btn-primary" type="submit">Registrar</a>
         </form>
-    </div>
-</body>
+    </div> 
+ </body>
 </html>

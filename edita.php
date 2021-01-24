@@ -18,24 +18,30 @@
         require 'connection.php';
       //requisição das querys
         require 'database.php';
-        $nome= $_POST['nome_usuario'];
-        $telefone= $_POST['telefone'];
-        $endereco= $_POST['endereco'];
-
-        $usuario = array(
+        
+        $id= $_GET['id'];
+        $where = "id_usuario = ".$id;
+        
+        $nome = $_POST['nome_usuario'];
+        $telefone = $_POST['telefone'];
+        $endereco = $_POST['endereco'];
+        
+         $usuario = array(
             'nome_usuario'  => $nome,
             'telefone'      => $telefone,
             'endereco'      => $endereco
         );
             
-        $salva = DBCreate('tb_usuario', $usuario);
-        if($salva){ 
-            echo '<script>alert("Ação realizada")</script> ';
-            
-        }else{
-            echo"erro";
-            echo mysqli_error($conexao);
-        }
+        $edita = DBUpDate('tb_usuario', $usuario, $where);
+        
+       // echo "'id_usuario=".$id."'";
+    if($edita){ 
+        echo '<script>alert("Ação realizada")</script> ';
+        
+    }else{
+        echo"erro";
+        //echo mysqli_error($conexao);
+    }
       ?>
     </div>    
  </body>

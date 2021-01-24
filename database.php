@@ -1,7 +1,7 @@
 <?php
 
 // Leitura de Registro
-    function DBRead($table, $params = null, $fields = '*'){
+    function DBRead($table,  $fields = '*', $params = null){
         $params = ($params) ? " {$params}" : null; // Se()  então ? senão : null
         $query = "SELECT {$fields} FROM {$table}{$params}";
 
@@ -30,9 +30,9 @@
         return DBExecute($query);
     }
 
-// Altera Registro
+// Alterar Registro
     function DBUpdate($table, array $data, $where = null){
-        foreach ($data as $key => $value){
+       foreach ($data as $key => $value){
             $fields[] = "{$key} = '{$value}'";
         }
 
